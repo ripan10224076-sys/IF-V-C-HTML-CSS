@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Learning Project - STT Cipasung</title>
   
-  <!-- Bootstrap 5 CSS via CDN -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   
   <style>
     :root {
-      --bg-sky-blue: #38bdf8; /* Warna Biru Langit / Sky Blue */
+      --bg-sky-blue: #38bdf8; 
     }
 
-    /* Latar Belakang Biru Langit */
+    
     body {
       background-color: var(--bg-sky-blue);
       color: #334155;
@@ -26,16 +26,16 @@
       max-width: 860px;
     }
 
-    /* Warna Judul Section Biru */
+    
     .text-title-blue {
       color: #0288d1 !important;
     }
 
-    /* Kotak Gelap Banner Terminal / Code (ditambahkan padding kanan 65px agar tidak menabrak badge) */
+    
     .dark-box {
       background-color: #1e293b;
       color: #f8fafc;
-      padding: 16px 65px 16px 20px;
+      padding: 16px 65px 16px 20px; 
       border-radius: 8px;
       position: relative;
     }
@@ -46,7 +46,7 @@
       word-break: break-word;
     }
 
-    /* Badge Tag HTML di Pojok Kanan Kotak Gelap */
+  
     .html-badge {
       position: absolute;
       top: 12px;
@@ -59,14 +59,13 @@
       border-radius: 4px;
     }
 
-    /* Kotak Inner Gradient Soft Pink */
+   
     .inner-pink-box {
       background: linear-gradient(135deg, #fff0f3 0%, #ffe4e6 100%);
       padding: 18px;
       border-radius: 8px;
     }
 
-    /* Section Full Gradient Cards */
     .card-practice {
       background: linear-gradient(135deg, #fff0f3 0%, #ffe4e6 100%);
       border: 1px solid #fecdd3 !important;
@@ -82,14 +81,13 @@
       border: 1px solid #99f6e4 !important;
     }
 
-    /* Banner Congratulations Indigo Gelap */
+    
     .card-congrats {
       background: linear-gradient(135deg, #3f51b5 0%, #303f9f 100%);
       color: #ffffff !important;
       border: none !important;
     }
 
-    /* Header Tabel Biru Presisi */
     .table-blue-header thead {
       background-color: #0288d1 !important;
       color: #ffffff !important;
@@ -108,14 +106,32 @@
 
   <main class="container main-container">
 
-    <!-- 1. HEADER (Kartu Putih di Dalam Container) -->
-    <header class="card shadow-sm p-4 text-center mb-4 border-0 rounded-3">
-      <h1 class="fw-bold h2 text-dark mb-1">🌐 HTML Learning Project</h1>
+    
+    <header class="card shadow-sm p-4 text-center mb-4 border-0 rounded-3 position-relative">
+      
+     
+      <div class="dropdown position-absolute top-0 end-0 m-2">
+        <button class="btn btn-light btn-sm rounded-circle text-secondary" type="button" id="headerMenu" data-bs-toggle="dropdown" aria-expanded="false" style="width: 32px; height: 32px; padding: 0; font-size: 1.2rem; line-height: 1;">
+          &#8942;
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="headerMenu">
+          <li><a class="dropdown-item small" href="#what-is-html">📌 What is HTML?</a></li>
+          <li><a class="dropdown-item small" href="#basic-structure">📄 Basic Structure</a></li>
+          <li><a class="dropdown-item small" href="#html-forms">📑 HTML Forms</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item small text-primary" href="javascript:void(0)" onclick="alert('HTML Learning Project - STT Cipasung (Ripan Fauzan)')">ℹ️ Info Proyek</a></li>
+        </ul>
+      </div>
+
+      
+      <a href="javascript:void(0)" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="text-decoration-none text-dark d-inline-block">
+        <h1 class="fw-bold h2 mb-1">🌐 HTML Learning Project</h1>
+      </a>
       <p class="text-secondary mb-0">Master the Building Blocks of the Web</p>
     </header>
 
-    <!-- 2. WHAT IS HTML -->
-    <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
+   
+    <section id="what-is-html" class="card shadow-sm p-4 mb-4 border-0 rounded-3">
       <h2 class="h4 fw-bold text-title-blue mb-3">📌 What is HTML?</h2>
       <p>
         <strong>HTML (HyperText Markup Language)</strong> is the standard markup language for creating web pages. Think of it as the skeleton or foundation of every website you visit.
@@ -142,8 +158,7 @@
       </div>
     </section>
 
-    <!-- 3. BASIC HTML STRUCTURE -->
-    <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
+    <section id="basic-structure" class="card shadow-sm p-4 mb-4 border-0 rounded-3">
       <h2 class="h4 fw-bold text-title-blue mb-3">📄 Basic HTML Structure</h2>
       <p class="text-secondary mb-3">Every HTML document follows this basic structure:</p>
 
@@ -174,7 +189,7 @@
       </div>
     </section>
 
-    <!-- 4. ESSENTIAL HTML TAGS -->
+    
     <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
       <h2 class="h4 fw-bold text-title-blue mb-3">📝 Essential HTML Tags</h2>
       
@@ -252,8 +267,8 @@
       </div>
     </section>
 
-    <!-- 5. HTML FORMS -->
-    <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
+    
+    <section id="html-forms" class="card shadow-sm p-4 mb-4 border-0 rounded-3">
       <h2 class="h4 fw-bold text-title-blue mb-3">📑 HTML Forms</h2>
       
       <div class="dark-box mb-3">
@@ -287,7 +302,7 @@
       </div>
     </section>
 
-    <!-- 6. HTML ATTRIBUTES -->
+    
     <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
       <h2 class="h4 fw-bold text-title-blue mb-3">🏷️ HTML Attributes</h2>
       
@@ -308,7 +323,7 @@
       </div>
     </section>
 
-    <!-- 7. TABLES IN HTML -->
+    
     <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
       <h2 class="h4 fw-bold text-title-blue mb-3">📊 Tables in HTML</h2>
       
@@ -351,7 +366,7 @@
       </div>
     </section>
 
-    <!-- 8. PRACTICE EXERCISES -->
+  
     <section class="card shadow-sm p-4 mb-4 card-practice rounded-3">
       <h2 class="h4 fw-bold text-title-blue mb-3">🎨 Practice Exercises</h2>
       <div class="row">
@@ -374,7 +389,7 @@
       </div>
     </section>
 
-    <!-- 9. PROJECT STRUCTURE -->
+  
     <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
       <h2 class="h4 fw-bold text-title-blue mb-3">📁 Project Structure</h2>
       <p class="mb-2">Recommended folder structure for web projects:</p>
@@ -393,7 +408,7 @@
       </div>
     </section>
 
-    <!-- 10. NEXT STEPS -->
+  
     <section class="card shadow-sm p-4 mb-4 card-nextsteps rounded-3">
       <h2 class="h4 fw-bold text-title-blue mb-3">🚀 Next Steps in Your Learning Journey</h2>
       <p class="mb-2">What to learn next:</p>
@@ -406,7 +421,7 @@
       </ul>
     </section>
 
-    <!-- 11. DEVELOPMENT TOOLS -->
+    
     <section class="card shadow-sm p-4 mb-4 card-devtools rounded-3">
       <h2 class="h4 fw-bold text-title-blue mb-3">🛠️ Development Tools</h2>
       <h5 class="fw-bold h6 text-dark mb-2">Recommended Tools:</h5>
@@ -418,7 +433,7 @@
       </ul>
     </section>
 
-    <!-- 12. CONGRATULATIONS -->
+    
     <section class="card shadow-sm p-4 text-center card-congrats rounded-3">
       <h2 class="fw-bold h3 mb-2">🎉 Congratulations!</h2>
       <p class="mb-3">
@@ -435,7 +450,7 @@
     STT Cipasung - Pemrograman Web © 2026 Ripan Fauzan (10224076)
   </footer>
 
-  <!-- Bootstrap 5 JS Bundle -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
