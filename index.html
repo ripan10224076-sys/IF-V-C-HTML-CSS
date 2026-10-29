@@ -1,354 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-<link rel="stylesheet" href="style.css">
-=======
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Learning Project - STT Cipasung</title>
+  
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-sky-blue: #38bdf8; /* Warna Biru Langit / Sky Blue */
+    }
 
->>>>>>> 02c3d992295ebebe7324b9383a54617ad099b14e
-    <title>HTML Learning Project</title>
+    /* Latar Belakang Biru Langit */
+    body {
+      background-color: var(--bg-sky-blue);
+      color: #334155;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+
+    .main-container {
+      max-width: 860px;
+    }
+
+    /* Warna Judul Section Biru */
+    .text-title-blue {
+      color: #0288d1 !important;
+    }
+
+    /* Kotak Gelap Banner Terminal / Code (ditambahkan padding kanan 65px agar tidak menabrak badge) */
+    .dark-box {
+      background-color: #1e293b;
+      color: #f8fafc;
+      padding: 16px 65px 16px 20px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .dark-box code {
+      color: #38bdf8;
+      background: transparent;
+      word-break: break-word;
+    }
+
+    /* Badge Tag HTML di Pojok Kanan Kotak Gelap */
+    .html-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background-color: #ef4444;
+      color: #ffffff;
+      font-size: 0.7em;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Kotak Inner Gradient Soft Pink */
+    .inner-pink-box {
+      background: linear-gradient(135deg, #fff0f3 0%, #ffe4e6 100%);
+      padding: 18px;
+      border-radius: 8px;
+    }
+
+    /* Section Full Gradient Cards */
+    .card-practice {
+      background: linear-gradient(135deg, #fff0f3 0%, #ffe4e6 100%);
+      border: 1px solid #fecdd3 !important;
+    }
+
+    .card-nextsteps {
+      background: linear-gradient(135deg, #e0f2fe 0%, #fce7f3 100%);
+      border: 1px solid #bae6fd !important;
+    }
+
+    .card-devtools {
+      background: linear-gradient(135deg, #ccfbf1 0%, #e0e7ff 100%);
+      border: 1px solid #99f6e4 !important;
+    }
+
+    /* Banner Congratulations Indigo Gelap */
+    .card-congrats {
+      background: linear-gradient(135deg, #3f51b5 0%, #303f9f 100%);
+      color: #ffffff !important;
+      border: none !important;
+    }
+
+    /* Header Tabel Biru Presisi */
+    .table-blue-header thead {
+      background-color: #0288d1 !important;
+      color: #ffffff !important;
+    }
+
+    code {
+      color: #e11d48;
+      background-color: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
-
 <body>
 
-    <header>
-        <h1>🌐 HTML Learning Project</h1>
+  <main class="container main-container">
 
-        <p>
-            Beginner to Advanced Guide with Examples
-        </p>
+    <!-- 1. HEADER (Kartu Putih di Dalam Container) -->
+    <header class="card shadow-sm p-4 text-center mb-4 border-0 rounded-3">
+      <h1 class="fw-bold h2 text-dark mb-1">🌐 HTML Learning Project</h1>
+      <p class="text-secondary mb-0">Master the Building Blocks of the Web</p>
     </header>
 
+    <!-- 2. WHAT IS HTML -->
+    <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
+      <h2 class="h4 fw-bold text-title-blue mb-3">📌 What is HTML?</h2>
+      <p>
+        <strong>HTML (HyperText Markup Language)</strong> is the standard markup language for creating web pages. Think of it as the skeleton or foundation of every website you visit.
+      </p>
+      
+      <div class="inner-pink-box mb-3">
+        <h5 class="fw-bold h6 text-dark mb-2">Key Points:</h5>
+        <ul class="mb-0 ps-3">
+          <li><strong>HyperText:</strong> Text with links to other texts</li>
+          <li><strong>Markup:</strong> A way to annotate text to show structure and meaning</li>
+          <li><strong>Language:</strong> A set of rules and syntax for creating web content</li>
+        </ul>
+      </div>
 
-    <main>
+      <div class="mt-3">
+        <h5 class="fw-bold h6 text-dark mb-2">🎉 How HTML Works</h5>
+        <p class="small text-secondary mb-2">
+          HTML uses <strong>tags</strong> to define elements. Tags are keywords surrounded by angle brackets like <code>&lt;tagname&gt;</code>. Most tags come in pairs:
+        </p>
+        <div class="dark-box">
+          <span class="html-badge">HTML</span>
+          <code>&lt;tagname&gt;Content goes here&lt;/tagname&gt; &lt;h1&gt;This is a heading&lt;/h1&gt; &lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+        </div>
+      </div>
+    </section>
 
-        <!-- WHAT IS HTML -->
-        <section>
+    <!-- 3. BASIC HTML STRUCTURE -->
+    <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
+      <h2 class="h4 fw-bold text-title-blue mb-3">📄 Basic HTML Structure</h2>
+      <p class="text-secondary mb-3">Every HTML document follows this basic structure:</p>
 
-            <h2>📌 What is HTML?</h2>
+      <div class="dark-box mb-3">
+        <span class="html-badge">HTML</span>
+        <pre class="mb-0 text-info" style="font-family: monospace; font-size: 0.85em; white-space: pre-wrap;">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
 
-            <p>
-                <strong>HTML (HyperText Markup Language)</strong>
-                is the standard markup language used to create web pages
-                and web applications.
-            </p>
+      <div class="inner-pink-box">
+        <h5 class="fw-bold h6 text-dark mb-2">Structure Breakdown:</h5>
+        <ul class="mb-0 ps-3">
+          <li><code>&lt;!DOCTYPE html&gt;</code> - Tells the browser this is HTML5</li>
+          <li><code>&lt;html&gt;</code> - Root element of the page</li>
+          <li><code>&lt;head&gt;</code> - Contains metadata (not visible on page)</li>
+          <li><code>&lt;body&gt;</code> - Contains visible content</li>
+        </ul>
+      </div>
+    </section>
 
-            <h3>Key Points:</h3>
+    <!-- 4. ESSENTIAL HTML TAGS -->
+    <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
+      <h2 class="h4 fw-bold text-title-blue mb-3">📝 Essential HTML Tags</h2>
+      
+      <div class="table-responsive mb-4">
+        <table class="table table-bordered table-blue-header align-middle mb-0">
+          <thead>
+            <tr>
+              <th>Tag</th>
+              <th>Purpose</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;h1&gt; - &lt;h6&gt;</code></td>
+              <td>Headings (largest to smallest)</td>
+              <td><code>&lt;h1&gt;Main Title&lt;/h1&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>&lt;p&gt;</code></td>
+              <td>Paragraphs</td>
+              <td><code>&lt;p&gt;This is text&lt;/p&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>&lt;a&gt;</code></td>
+              <td>Links</td>
+              <td><code>&lt;a href="#"&gt;Link text&lt;/a&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>&lt;img&gt;</code></td>
+              <td>Images</td>
+              <td><code>&lt;img src="image.jpg" alt="Description"&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>&lt;div&gt;</code></td>
+              <td>Container/section</td>
+              <td><code>&lt;div&gt;Content here&lt;/div&gt;</code></td>
+            </tr>
+            <tr>
+              <td><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code></td>
+              <td>Lists</td>
+              <td><code>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
+      <div class="bg-light p-3 border rounded-3">
+        <h5 class="fw-bold h6 text-dark mb-3">🍿 Live Examples:</h5>
+        <h1 class="h3 fw-bold text-dark">This is an H1 heading</h1>
+        <h3 class="h5 text-secondary">This is an H3 heading</h3>
+        <p>
+          This is a paragraph with <strong>bold text</strong>, <em>italic text</em>, and <u>underlined text</u>.
+        </p>
+        <p>
+          Here is an <a href="https://www.google.com" target="_blank" class="text-primary fw-bold">anchor link example</a>.
+        </p>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <h6 class="fw-bold">Unordered List:</h6>
             <ul>
-                <li>Standard markup language for Web pages</li>
-                <li>Describes the structure of a Web page using markup</li>
-                <li>Elements tell the browser how to display the content</li>
+              <li>First item</li>
+              <li>Second item</li>
             </ul>
-
-        </section>
-
-
-        <!-- HOW HTML WORKS -->
-        <section>
-
-            <h3>How HTML Works</h3>
-
-            <p>
-                HTML code consists of tags that tell the web browser
-                how to display text, images, and other multimedia elements.
-            </p>
-
-        </section>
-
-
-        <!-- BASIC HTML STRUCTURE -->
-        <section>
-
-            <h2>📄 Basic HTML Structure</h2>
-
-            <p>
-                Every HTML document must start with a document type declaration.
-            </p>
-
-            <h3>Core Elements Breakdown:</h3>
-
-            <ul>
-                <li>
-                    <code>&lt;!DOCTYPE html&gt;</code>
-                    - Defines document type
-                </li>
-
-                <li>
-                    <code>&lt;html&gt;</code>
-                    - Root element of an HTML page
-                </li>
-
-                <li>
-                    <code>&lt;head&gt;</code>
-                    - Contains meta information about the page
-                </li>
-
-                <li>
-                    <code>&lt;body&gt;</code>
-                    - Defines the document's body
-                </li>
-            </ul>
-
-        </section>
-
-
-        <!-- ESSENTIAL HTML TAGS -->
-        <section>
-
-            <h2>📝 Essential HTML Tags</h2>
-
-            <h3>Tag Purpose &amp; Examples:</h3>
-
-            <ul>
-
-                <li>
-                    <code>&lt;h1&gt; - &lt;h6&gt;</code>
-                    : Headings (largest to smallest)
-                </li>
-
-                <li>
-                    <code>&lt;p&gt;</code>
-                    : Paragraph
-                </li>
-
-                <li>
-                    <code>&lt;a&gt;</code>
-                    : Anchor (Hyperlink)
-                </li>
-
-                <li>
-                    <code>&lt;img&gt;</code>
-                    : Image
-                </li>
-
-                <li>
-                    <code>&lt;div&gt;</code>
-                    : Division / Container
-                </li>
-
-                <li>
-                    <code>&lt;span&gt;</code>
-                    : Inline Container
-                </li>
-
-            </ul>
-
-
-            <h3>Live Examples Text:</h3>
-
-            <h1>This is an H1 heading</h1>
-
-            <h3>This is an H3 heading</h3>
-
-            <p>
-                This is a paragraph with
-                <strong>bold text</strong>,
-                <em>italic text</em>,
-                and <u>underlined text</u>.
-            </p>
-
-            <p>
-                Here is an
-                <a href="https://www.google.com" target="_blank">
-                    anchor link example
-                </a>.
-            </p>
-
-
-            <h3>Unordered List:</h3>
-
-            <ul>
-                <li>First item</li>
-                <li>Second item</li>
-            </ul>
-
-
-            <h3>Ordered List:</h3>
-
+          </div>
+          <div class="col-md-6">
+            <h6 class="fw-bold">Ordered List:</h6>
             <ol>
-                <li>Step One</li>
-                <li>Step Two</li>
+              <li>Step One</li>
+              <li>Step Two</li>
             </ol>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        </section>
+    <!-- 5. HTML FORMS -->
+    <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
+      <h2 class="h4 fw-bold text-title-blue mb-3">📑 HTML Forms</h2>
+      
+      <div class="dark-box mb-3">
+        <p class="mb-0">Forms are used to collect user input.</p>
+      </div>
 
+      <div class="border rounded-3 p-3 bg-white">
+        <h5 class="fw-bold h6 text-dark mb-3">Contact Us Form Fields:</h5>
+        <form>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Name</label>
+            <input type="text" class="form-control" placeholder="Masukkan Nama">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Email</label>
+            <input type="email" class="form-control" placeholder="Masukkan Email">
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Topic</label>
+            <select class="form-select">
+              <option>General Inquiry</option>
+              <option>Support</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label small fw-bold">Message</label>
+            <textarea class="form-control" rows="3" placeholder="Tulis pesan..."></textarea>
+          </div>
+          <button type="button" class="btn btn-primary px-4">Submit Form</button>
+        </form>
+      </div>
+    </section>
 
-        <!-- HTML FORMS -->
-        <section>
+    <!-- 6. HTML ATTRIBUTES -->
+    <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
+      <h2 class="h4 fw-bold text-title-blue mb-3">🏷️ HTML Attributes</h2>
+      
+      <div class="dark-box mb-3">
+        <p class="mb-0">Attributes provide additional information about elements.</p>
+      </div>
 
-            <h2>📑 HTML Forms</h2>
+      <div class="inner-pink-box">
+        <h5 class="fw-bold h6 text-dark mb-2">Important Attributes:</h5>
+        <ul class="mb-0 ps-3">
+          <li><code>href</code> - Specifies URL for links</li>
+          <li><code>src</code> - Specifies image source path</li>
+          <li><code>alt</code> - Alternate text for images</li>
+          <li><code>class</code> - Styling class name</li>
+          <li><code>id</code> - Unique element identifier</li>
+          <li><code>style</code> - Inline CSS styles</li>
+        </ul>
+      </div>
+    </section>
 
-            <p>
-                Forms are used to collect user input.
-            </p>
+    <!-- 7. TABLES IN HTML -->
+    <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
+      <h2 class="h4 fw-bold text-title-blue mb-3">📊 Tables in HTML</h2>
+      
+      <div class="dark-box mb-3">
+        <p class="mb-0">HTML tables are used to arrange data into rows and columns.</p>
+      </div>
 
-            <h3>Contact Us Form Fields:</h3>
+      <h5 class="fw-bold h6 text-dark mb-2">Sample Data:</h5>
+      <div class="table-responsive">
+        <table class="table table-bordered table-blue-header align-middle mb-0">
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Name</th>
+              <th>Grade</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ST-001</td>
+              <td>Alex Johnson</td>
+              <td><span class="badge bg-success">A</span></td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>ST-002</td>
+              <td>Maria Garcia</td>
+              <td><span class="badge bg-primary">B</span></td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>ST-003</td>
+              <td>Liam Smith</td>
+              <td><span class="badge bg-success">A+</span></td>
+              <td>Active</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-            <ul>
-                <li>Name</li>
-                <li>Email</li>
-                <li>Topic (General Inquiry, Support)</li>
-                <li>Message</li>
-                <li>Submit Form</li>
-            </ul>
+    <!-- 8. PRACTICE EXERCISES -->
+    <section class="card shadow-sm p-4 mb-4 card-practice rounded-3">
+      <h2 class="h4 fw-bold text-title-blue mb-3">🎨 Practice Exercises</h2>
+      <div class="row">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <h5 class="fw-bold h6 text-dark">Beginner Tasks:</h5>
+          <ol class="ps-3 mb-0">
+            <li>Create a personal profile page with headings and paragraphs.</li>
+            <li>Add an image with alt text.</li>
+            <li>Create a simple list of your favorite foods.</li>
+          </ol>
+        </div>
+        <div class="col-md-6">
+          <h5 class="fw-bold h6 text-dark">Intermediate Tasks:</h5>
+          <ol class="ps-3 mb-0">
+            <li>Build a registration form with input validation.</li>
+            <li>Create a product comparison table.</li>
+            <li>Add links that open in new tabs.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-        </section>
-
-
-        <!-- HTML ATTRIBUTES -->
-        <section>
-
-            <h2>🏷️ HTML Attributes</h2>
-
-            <p>
-                Attributes provide additional information about elements.
-            </p>
-
-            <h3>Important Attributes:</h3>
-
-            <ul>
-                <li>
-                    <code>href</code>
-                    - Specifies URL for links
-                </li>
-
-                <li>
-                    <code>src</code>
-                    - Specifies image source path
-                </li>
-
-                <li>
-                    <code>alt</code>
-                    - Alternate text for images
-                </li>
-
-                <li>
-                    <code>class</code>
-                    - Styling class name
-                </li>
-
-                <li>
-                    <code>id</code>
-                    - Unique element identifier
-                </li>
-
-                <li>
-                    <code>style</code>
-                    - Inline CSS styles
-                </li>
-            </ul>
-
-        </section>
-
-
-        <!-- TABLES -->
-        <section>
-
-            <h2>📊 Tables in HTML</h2>
-
-            <p>
-                HTML tables are used to arrange data into rows and columns.
-            </p>
-
-            <h3>Sample Data:</h3>
-
-            <table border="1">
-
-                <thead>
-                    <tr>
-                        <th>Student ID</th>
-                        <th>Name</th>
-                        <th>Grade</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>ST-001</td>
-                        <td>Alex Johnson</td>
-                        <td>A</td>
-                        <td>Active</td>
-                    </tr>
-
-                    <tr>
-                        <td>ST-002</td>
-                        <td>Maria Garcia</td>
-                        <td>B</td>
-                        <td>Active</td>
-                    </tr>
-
-                    <tr>
-                        <td>ST-003</td>
-                        <td>Liam Smith</td>
-                        <td>A+</td>
-                        <td>Active</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </section>
-
-
-        <!-- PRACTICE EXERCISES -->
-        <section>
-
-            <h2>🎨 Practice Exercises</h2>
-
-            <h3>Beginner Tasks:</h3>
-
-            <ol>
-                <li>
-                    Create a personal profile page with headings and paragraphs.
-                </li>
-
-                <li>
-                    Add an image with alt text.
-                </li>
-
-                <li>
-                    Create a simple list of your favorite foods.
-                </li>
-            </ol>
-
-
-            <h3>Intermediate Tasks:</h3>
-
-            <ol>
-                <li>
-                    Build a registration form with input validation.
-                </li>
-
-                <li>
-                    Create a product comparison table.
-                </li>
-
-                <li>
-                    Add links that open in new tabs.
-                </li>
-            </ol>
-
-        </section>
-
-
-        <!-- PROJECT STRUCTURE -->
-        <section>
-
-            <h2>📁 Project Structure</h2>
-
-            <p>
-                Recommended folder structure for web projects:
-            </p>
-
-            <pre>
-my-website/
+    <!-- 9. PROJECT STRUCTURE -->
+    <section class="card shadow-sm p-4 mb-4 border-0 rounded-3">
+      <h2 class="h4 fw-bold text-title-blue mb-3">📁 Project Structure</h2>
+      <p class="mb-2">Recommended folder structure for web projects:</p>
+      <div class="dark-box">
+<pre class="mb-0" style="color: #38bdf8; font-family: monospace;">my-website/
 ├── index.html
 ├── about.html
 ├── contact.html
@@ -358,86 +389,53 @@ my-website/
 │   └── main.js
 └── images/
     ├── logo.png
-    └── banner.jpg
-            </pre>
+    └── banner.jpg</pre>
+      </div>
+    </section>
 
-        </section>
+    <!-- 10. NEXT STEPS -->
+    <section class="card shadow-sm p-4 mb-4 card-nextsteps rounded-3">
+      <h2 class="h4 fw-bold text-title-blue mb-3">🚀 Next Steps in Your Learning Journey</h2>
+      <p class="mb-2">What to learn next:</p>
+      <ul class="ps-3 mb-0">
+        <li>Learn CSS (Cascading Style Sheets) for styling</li>
+        <li>Master Flexbox &amp; Grid layout techniques</li>
+        <li>Explore JavaScript for dynamic and interactive content</li>
+        <li>Build Practical Projects to reinforce learning</li>
+        <li>Practice Responsive Web Design for mobile support</li>
+      </ul>
+    </section>
 
+    <!-- 11. DEVELOPMENT TOOLS -->
+    <section class="card shadow-sm p-4 mb-4 card-devtools rounded-3">
+      <h2 class="h4 fw-bold text-title-blue mb-3">🛠️ Development Tools</h2>
+      <h5 class="fw-bold h6 text-dark mb-2">Recommended Tools:</h5>
+      <ul class="ps-3 mb-0">
+        <li>VS Code (Code Editor)</li>
+        <li>Chrome / Firefox DevTools (Debugging)</li>
+        <li>Git &amp; GitHub (Version Control)</li>
+        <li>Live Server (VS Code Extension)</li>
+      </ul>
+    </section>
 
-        <!-- NEXT STEPS -->
-        <section>
+    <!-- 12. CONGRATULATIONS -->
+    <section class="card shadow-sm p-4 text-center card-congrats rounded-3">
+      <h2 class="fw-bold h3 mb-2">🎉 Congratulations!</h2>
+      <p class="mb-3">
+        You've completed the HTML Learning Project guide! You now have a solid foundation to start building your own web pages.
+      </p>
+      <p class="small text-white-50 mb-0 fw-bold">
+        Remember: The best way to learn HTML is by doing. Keep building your own projects!
+      </p>
+    </section>
 
-            <h2>🚀 Next Steps in Your Learning Journey</h2>
+  </main>
 
-            <p>
-                What to learn next:
-            </p>
+  <footer class="text-center py-3 text-white small">
+    STT Cipasung - Pemrograman Web © 2026 Ripan Fauzan (10224076)
+  </footer>
 
-            <ul>
-                <li>
-                    Learn CSS (Cascading Style Sheets) for styling
-                </li>
-
-                <li>
-                    Master Flexbox &amp; Grid layout techniques
-                </li>
-
-                <li>
-                    Explore JavaScript for dynamic and interactive content
-                </li>
-
-                <li>
-                    Build Practical Projects to reinforce learning
-                </li>
-
-                <li>
-                    Practice Responsive Web Design for mobile support
-                </li>
-            </ul>
-
-        </section>
-
-
-        <!-- DEVELOPMENT TOOLS -->
-        <section>
-
-            <h2>🛠️ Development Tools</h2>
-
-            <h3>Recommended Tools:</h3>
-
-            <ul>
-                <li>VS Code (Code Editor)</li>
-                <li>Chrome / Firefox DevTools (Debugging)</li>
-                <li>Git &amp; GitHub (Version Control)</li>
-                <li>Live Server (VS Code Extension)</li>
-            </ul>
-
-        </section>
-
-
-        <!-- CONGRATULATIONS -->
-        <section>
-
-            <h2>🎉 Congratulations!</h2>
-
-            <p>
-                You've completed the HTML Learning Project guide!
-                You now have a solid foundation to start building
-                your own web pages.
-            </p>
-
-        </section>
-
-    </main>
-
-
-    
-
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 02c3d992295ebebe7324b9383a54617ad099b14e
